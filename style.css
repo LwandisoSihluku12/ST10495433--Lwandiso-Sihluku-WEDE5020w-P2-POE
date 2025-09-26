@@ -1,20 +1,39 @@
-/* ====== Global Styles ====== */
-body {
-  font-family: 'Poppins', sans-serif;
+/* ========== GLOBAL RESET & BASE ========== */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
 }
 
-/* ====== Header / Navigation ====== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ========== HEADER & NAV ========== */
 header {
-  background-color: #111;
+  background: #111;
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
@@ -27,27 +46,25 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
 
 nav a {
   color: #fff;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #ff4c29; /* Sneaker accent color */
+  color: #ff4c29;
 }
 
-/* ====== Hero Section ====== */
+/* ========== HERO SECTION ========== */
 .hero {
   background: url('images/hero-sneaker.jpg') center/cover no-repeat;
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
   color: white;
 }
@@ -78,7 +95,7 @@ nav a:hover {
   background-color: #e6391a;
 }
 
-/* ====== Product Grid ====== */
+/* ========== PRODUCT CATALOG PAGE ========== */
 .products {
   padding: 3rem 2rem;
   display: grid;
@@ -129,7 +146,64 @@ nav a:hover {
   background: #ff4c29;
 }
 
-/* ====== Footer ====== */
+
+/* ========== ABOUT PAGE ========== */
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* ========== CONTACT PAGE ========== */
+.contact {
+  padding: 3rem 2rem;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact button {
+  padding: 0.8rem 1.5rem;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background: #ff4c29;
+}
+
+/* ========== FOOTER ========== */
 footer {
   background: #111;
   color: #fff;
@@ -142,3 +216,4 @@ footer p {
   margin: 0;
   font-size: 0.9rem;
 }
+ 
