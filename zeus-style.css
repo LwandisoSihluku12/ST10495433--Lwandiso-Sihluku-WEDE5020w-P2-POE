@@ -1,12 +1,7 @@
 /* ==================================================
    ZEUS ONLINE SNEAKER STORE — MAIN STYLESHEET
-   File name: zeus-style.css
-   Conventions: BEM-like class naming (block__element--modifier)
-   Purpose: global reset, design tokens, typography scale, layout (desktop-first),
-            responsive breakpoints, interactive states, and notes for responsive images.
-   ================================================== */
 
-/* -------------------- :root – design tokens -------------------- */
+/* -------------------- Design Tokens (CSS Variables) -------------------- */
 :root{
   /* colors */
   --color-bg: #f6f7f8;
@@ -266,26 +261,35 @@ a:hover{ color: var(--color-accent); }
   .product-card__img{ height: 180px; }
 }
 
-/* -------------------- Accessibility helpers -------------------- */
+/* -------------------- Accessibility helpers --------------------
+Got assistance from an AI tool here */
 .sr-only{ position:absolute; left:-9999px; }
 
-/* -------------------- Notes for responsive images & usage -------------------- */
-/*
-  Use the picture element or img with srcset/sizes to serve optimal images. Example (HTML):
+.nav-links {
+  display: flex;
+  list-style: none;
+}
 
-  <picture>
-    <source media="(min-width: 1024px)" srcset="/images/sneaker-large.jpg 1200w">
-    <source media="(min-width: 768px)" srcset="/images/sneaker-medium.jpg 800w">
-    <img src="/images/sneaker-small.jpg" alt="Zeus Sneaker" loading="lazy" decoding="async">
-  </picture>
+.menu-toggle {
+  display: none; /* Hidden on large screens */
+  cursor: pointer;
+}
 
-  or using srcset on img:
-  <img src="/images/sneaker-small.jpg"
-       srcset="/images/sneaker-small.jpg 400w, /images/sneaker-medium.jpg 800w, /images/sneaker-large.jpg 1200w"
-       sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 33vw"
-       alt="Zeus Sneaker" loading="lazy">
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide menu by default on small screens */
+    flex-direction: column;
+    width: 100%;
+  }
 
-  Leaving image sizing to the browser and using object-fit on CSS helps maintain layout stability.
-*/
+  .menu-toggle {
+    display: block; /* Show hamburger menu */
+  }
 
-/* -------------------- End of file -------------------- */
+  .nav-links.active {
+    display: flex; /* Show menu when toggled */
+  }
+}
+
+
+  
