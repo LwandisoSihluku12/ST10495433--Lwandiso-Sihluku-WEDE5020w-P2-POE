@@ -8,22 +8,32 @@
     <link rel="stylesheet" href="zeus-style.css">
 </head>
 <body>
-  <div class="page">
-    
     <!-- Header -->
-    <header class="header">
-      <div class="container header__inner">
-        <div class="brand">ZEUS SNEAKERS</div>
-        <nav class="nav">
-          <a href="index.html" class="nav__link">Home</a>
-          <a href="about.html" class="nav__link">About Us</a>
-          <a href="products.html" class="nav__link">Products</a>   
-          <a href="cart.html" class="nav__link">Cart</a>
-          <a href="contact.html" class="nav__link">Contact Us</a>
-        </nav>
-        <button class="header__burger">☰</button>
-      </div>
-    </header>
+  <header>
+  <nav class="navbar">
+    <a class="logo" href="index.html">ZEUS</a>
+
+    <ul class="nav-links" id="primary-navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Products.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+
+    <!-- accessible button for hamburger -->
+    <button class="hamburger"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+    
 
     <!-- Main -->
     <main class="main container">
@@ -64,5 +74,6 @@
       <p>&copy; 2024 Zeus Online Sneaker Store. All rights reserved.</p>
     </footer>
   </div>
+  <script src="scripts/main.js" defer></script>
 </body>
 </html>
