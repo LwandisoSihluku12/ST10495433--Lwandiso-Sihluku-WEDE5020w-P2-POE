@@ -51,6 +51,15 @@ zeus-sneaker-store/
 │
 └── README.md          # This file
 
+CHANGELOG
+Initial release of Zeus Online Sneaker Store.
+Created Homepage, Products, About, Cart, and Contact pages.
+Implemented responsive navigation with a hamburger menu.
+Added hero section with welcome message and "Shop Now" button.
+Styled pages with CSS for layout, typography, and responsive design.
+Added JavaScript to handle menu toggling and accessibility.
+Included product cards, sneaker drop calendar, and contact form iframe.
+
 Author
 Lwandiso Sihluku
 Student project for learning web development basics.
