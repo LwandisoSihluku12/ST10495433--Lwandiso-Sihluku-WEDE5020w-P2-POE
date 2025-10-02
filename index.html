@@ -1,79 +1,48 @@
 <!DOCTYPE html>
+<!-- Declares the document type (HTML5) -->
+
 <html lang="en">
+<!-- The page language is English -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures all text and special characters display correctly -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the site responsive (adapts to mobile, tablet, desktop) -->
+
     <title>Zeus Online Sneaker Store | Homepage</title>
+    <!-- The title appears on the browser tab -->
+
     <!-- Hooked stylesheet -->
     <link rel="stylesheet" href="zeus-style.css">
+    <!-- Connects to external CSS for styling -->
 </head>
+
 <body>
-    <!-- Header -->
-  <header>
-  <nav class="navbar">
-    <a class="logo" href="index.html">ZEUS</a>
+    <!-- ================= HEADER ================= -->
+    <header>
+      <nav class="navbar">
+        <!-- Brand / Logo -->
+        <a class="logo" href="index.html">ZEUS SNEAKERS</a>
 
-    <ul class="nav-links" id="primary-navigation">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="Products.html">Shop</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="cart.html">Cart</a></li>
-    </ul>
-
-    <!-- accessible button for hamburger -->
-    <button class="hamburger"
-            aria-controls="primary-navigation"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
-</header>
-
-    
-
-    <!-- Main -->
-    <main class="main container">
-      <section class="hero" style="background-image: url('Images/Sneaker 1.jpg');">
-        <h1 class="hero__title">Welcome to Zeus Online Sneaker Store</h1>
-        <p class="lead">
-          Your one-stop shop for premium sneakers. Explore our exclusive collection of high-quality sneakers from top brands. Whether you're looking for the latest releases or classic styles, we have something for every sneaker enthusiast.
-        </p>
-        <a href="products.html" class="hero__cta">Shop Now</a>
-      </section>
-
-      <!--  Why Choose Us -->
-      <section class="mt-md">
-        <h2>Why Choose Us?</h2>
-        <ul>
-          <li>⚡ <strong>Authenticity Guaranteed:</strong> We source directly from trusted brands.</li>
-          <li>⚡ <strong>Wide Selection:</strong> Limited-edition releases & everyday classics.</li>
-          <li>⚡ <strong>Competitive Prices:</strong> Premium sneakers at unbeatable prices.</li>
-          <li>⚡ <strong>Fast Shipping:</strong> Quick delivery across Africa.</li>
-          <li>⚡ <strong>Exceptional Service:</strong> Dedicated support team for you.</li>
+        <!-- Navigation menu (links to different pages) -->
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Products.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-      </section>
 
-      <!-- Image -->
-      <section class="mt-md">
-        <img src="Images/Sneaker 7.jpg" alt="Models" class="product-card__img">
-      </section>
-
-      <!-- Sneaker Drop Calendar -->
-      <section class="mt-md u-center">
-        <h3>Stay Tuned For Our Upcoming Drops</h3>
-        <img src="Images/Sneaker Drop Calender.png" alt="Zeus Sneaker Drop Calendar" class="product-card__img">
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer u-center">
-      <p>&copy; 2024 Zeus Online Sneaker Store. All rights reserved.</p>
-    </footer>
-  </div>
-  <script src="scripts/main.js" defer></script>
-</body>
-</html>
+        <!-- Hamburger button (for mobile navigation) -->
+        <!-- aria-controls / aria-expanded / aria-label 
+             are for accessibility (screen readers) -->
+        <button class="hamburger"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+          <!-- These spans are styled with CSS to look like 3 horizontal lines -->
