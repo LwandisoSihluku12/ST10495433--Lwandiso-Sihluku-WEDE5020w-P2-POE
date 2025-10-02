@@ -2,7 +2,7 @@
    ZEUS ONLINE SNEAKER STORE — MAIN STYLESHEET
 */
 
-/* -------------------- Design Tokens (CSS Variables) -------------------- */
+/* CSS Variables*/
 :root{
   /* colors */
   --color-bg: #f6f7f8;
@@ -42,7 +42,7 @@
   --shadow-md: 0 8px 20px rgba(17,17,17,0.08);
 }
 
-/* -------------------- CSS Reset (modern, small) -------------------- */
+/* CSS Reset (modern, small) */
 /* Purpose: consistent baseline across browsers */
 *,
 *::before,
@@ -76,7 +76,7 @@ img{ max-width: 100%; height: auto; display: block; }
 /* enable better default focus styles for accessibility */
 :focus{ outline: 3px solid rgba(255,60,0,0.15); outline-offset: 2px; }
 
-/* -------------------- Global defaults -------------------- */
+/* Global defaults */
 html{ font-size: 100%; /*16px = 1rem*/ }
 body{
   font-family: var(--ff-sans);
@@ -103,7 +103,7 @@ body{
   position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px);
 }
 
-/* -------------------- Typography helpers -------------------- */
+/* Typography helpers */
 h1, h2, h3, h4, h5{ line-height: 1.1; letter-spacing: -0.02em; margin-bottom: var(--space-sm); }
 h1{ font-size: var(--type-3xl); }
 h2{ font-size: var(--type-2xl); }
@@ -112,7 +112,7 @@ h3{ font-size: var(--type-xl); }
 .p-small{ font-size: var(--type-sm); }
 strong{ font-weight: 600; }
 
-/* -------------------- Header and Navigation (desktop grid) -------------------- */
+/* Header and Navigation (desktop grid) */
 .header{
   background: linear-gradient(180deg, rgba(17,17,17,0.98), rgba(17,17,17,0.95));
   color: var(--color-inverse);
@@ -146,7 +146,7 @@ strong{ font-weight: 600; }
 /* mobile hamburger (hidden on large screens) */
 .header__burger{ display: none; }
 
-/* -------------------- Page Layout — CSS Grid areas (desktop-first) -------------------- */
+/*Page Layout — CSS Grid areas (desktop-first) */
 .page{
   display: grid;
   grid-template-columns: 1fr 320px; /* main + sidebar */
@@ -164,7 +164,7 @@ strong{ font-weight: 600; }
 .sidebar{ grid-area: sidebar; }
 .footer{ grid-area: footer; }
 
-/* -------------------- Hero / Banner -------------------- */
+/* Hero / Banner */
 .hero{
   background-position: center;
   background-size: cover;
@@ -177,7 +177,7 @@ strong{ font-weight: 600; }
 .hero__cta{ margin-top: var(--space-md); display: inline-block; padding: 0.75rem 1.25rem; border-radius: 999px; background: var(--color-accent); color: var(--color-inverse); font-weight: 600; text-decoration: none; }
 .hero__cta:hover{ background: var(--color-accent-600); }
 
-/* -------------------- Product grid (responsive) -------------------- */
+/*  Product grid (responsive) */
 .products{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -200,19 +200,19 @@ strong{ font-weight: 600; }
 .product-card__btn{ margin-top: var(--space-sm); padding: 0.6rem; border-radius: var(--radius-sm); background: var(--color-text); color: var(--color-inverse); cursor: pointer; }
 .product-card__btn:hover{ background: var(--color-accent); }
 
-/* -------------------- Sidebar / Filters -------------------- */
+/*Sidebar / Filters*/
 .sidebar{
   padding: var(--space-md);
 }
 .filter{ background: var(--color-surface); padding: var(--space-md); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); margin-bottom: var(--space-md); }
 
-/* -------------------- Footer -------------------- */
+/* Footer */
 .footer{
   background: #0b0b0b; color: var(--color-inverse); padding: var(--space-lg); border-radius: var(--radius-sm);
 }
 .footer a{ color: rgba(255,255,255,0.85); text-decoration: none; }
 
-/* -------------------- Forms and inputs -------------------- */
+/* Forms and inputs */
 .input,
 select, textarea{
   width: 100%; padding: 0.6rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-size: var(--type-base); background: var(--color-surface);
@@ -222,7 +222,7 @@ select, textarea{
 .button--primary{ background: var(--color-accent); color: var(--color-inverse); font-weight: 600; }
 .button--ghost{ background: transparent; border: 1px solid var(--color-border); }
 
-/* -------------------- Interactive states (pseudo-classes) -------------------- */
+/* Interactive states (pseudo-classes) */
 a:link,a:visited{ color: inherit; }
 a:hover{ color: var(--color-accent); }
 .button:active{ transform: translateY(1px); }
@@ -230,7 +230,7 @@ a:hover{ color: var(--color-accent); }
 /* keyboard focus visible */
 :focus-visible{ outline: 3px solid rgba(255,60,0,0.18); outline-offset: 2px; }
 
-/* -------------------- Responsive rules (breakpoints) -------------------- */
+/* Responsive rules (breakpoints) */
 /* Breakpoints (desktop-first):
    - large desktop: >= 1200px (handled by container width)
    - desktop:    >= 1024px
@@ -261,7 +261,7 @@ a:hover{ color: var(--color-accent); }
   .hero__title{ font-size: 1.6rem; }
   .product-card__img{ height: 180px; }
 }
-/* ---------- Navbar ---------- */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -373,4 +373,3 @@ a:hover{ color: var(--color-accent); }
 /* -------------------- Accessibility helpers -------------------- */
 .sr-only{ position:absolute; left:-9999px; }
 
-/* Removed duplicate navigation styles (.nav-links, .menu-toggle) to avoid redundancy and conflicts. */

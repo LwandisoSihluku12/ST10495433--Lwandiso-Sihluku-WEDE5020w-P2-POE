@@ -1,19 +1,34 @@
 <!DOCTYPE html>
+<!-- This declares the document as HTML5 -->
+
 <html lang="en">
+<!-- The language of the page is English -->
+
 <head>
   <meta charset="UTF-8">
+  <!-- Ensures text (letters, symbols, accents) displays correctly -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the site mobile-friendly and responsive -->
+
   <title>Zeus Online Sneaker Store | Checkout</title>
+  <!-- The page title appears on the browser tab -->
+
   <!-- Hooked stylesheet -->
   <link rel="stylesheet" href="zeus-style.css">
+  <!-- Connects to the external CSS file that controls the look of the page -->
 </head>
+
 <body>
   <div class="page">
+    <!-- A wrapper div to group everything on the page -->
 
-    <!-- Header -->
+    <!-- ================= HEADER ================= -->
     <header class="header">
       <div class="container header__inner">
-        <div class="brand">ZEUS SNEAKERS</div>
+        <div class="brand">ZEUS SNEAKERS</div> <!-- Website brand/logo -->
+
+        <!-- Navigation menu -->
         <nav class="nav">
           <a href="index.html" class="nav__link">Home</a>
           <a href="about.html" class="nav__link">About Us</a>
@@ -21,60 +36,79 @@
           <a href="cart.html" class="nav__link">Cart</a>
           <a href="contact.html" class="nav__link">Contact Us</a>
         </nav>
+
+        <!-- Burger button for mobile navigation -->
         <button class="header__burger">☰</button>
       </div>
     </header>
 
-    <!-- Main -->
+    <!-- ================= MAIN CONTENT ================= -->
     <main class="main container">
       <h1>Checkout</h1>
+      <!-- Main heading for the page -->
+
       <p>
-        Ready to finalize your purchase? You're just a few clicks away from owning your favorite sneakers! 
-        Please fill out the form below with your details, and we'll take care of the rest. 
-        Thank you for choosing ZEUS Online Sneaker Store!
+        Ready to finalize your purchase? You're just a few clicks away 
+        from owning your favorite sneakers! Fill out the form below...
       </p>
 
-      <!-- Checkout Form -->
+      <!-- ============== CHECKOUT FORM ============== -->
+      <!-- "action" = where the form sends data after submission -->
+      <!-- "method=post" = sends data securely (not visible in URL) -->
       <form action="confirmation.html" method="post" class="mt-md">
-        
-        <fieldset class="filter">
-          <legend>Customer Details</legend>
 
+        <!-- Customer Details Section -->
+        <fieldset class="filter">
+          <!-- Groups related form fields -->
+          <legend>Customer Details</legend>
+          <!-- Title for this fieldset -->
+
+          <!-- Input for Full Name -->
           <label for="fullname">Full Name</label>
           <input type="text" id="fullname" name="fullname" class="input" required>
 
+          <!-- Input for Email -->
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" class="input" required>
 
+          <!-- Input for Shipping Address -->
           <label for="address">Shipping Address</label>
           <textarea id="address" name="address" rows="3" class="input" required></textarea>
         </fieldset>
 
+        <!-- Payment Information Section -->
         <fieldset class="filter mt-md">
           <legend>Payment Information</legend>
 
+          <!-- Name on Card -->
           <label for="cardname">Name on Card</label>
           <input type="text" id="cardname" name="cardname" class="input" required>
 
+          <!-- Card Number -->
           <label for="cardnumber">Card Number</label>
           <input type="text" id="cardnumber" name="cardnumber" maxlength="16" class="input" required>
 
+          <!-- Expiry Date (Month/Year) -->
           <label for="expdate">Expiry Date</label>
           <input type="month" id="expdate" name="expdate" class="input" required>
 
+          <!-- CVV (hidden as password for security) -->
           <label for="cvv">CVV</label>
           <input type="password" id="cvv" name="cvv" maxlength="4" class="input" required>
         </fieldset>
 
+        <!-- Submit button to place the order -->
         <button type="submit" class="button button--primary mt-md">Place Order</button>
       </form>
     </main>
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
     <footer class="footer u-center">
       <p>&copy; 2024 Zeus Online Sneaker Store. All rights reserved.</p>
+      <!-- &copy; = copyright symbol -->
     </footer>
 
   </div>
 </body>
 </html>
+<!-- End of the HTML document -->
